@@ -8,19 +8,20 @@ function scrollFunction() {
         document.getElementById('navbar').style.transition = 'ease-in-out';
         document.getElementById('navbar').style.transitionDuration = '0.3s';
         document.getElementById('title-brand').style.color = 'black' ;
-        document.getElementById('list-home').style.color = 'white';
+        document.getElementById('list-home').style.color = 'black';
         document.getElementById('list-about').style.color = 'black';
         document.getElementById('list-visi-misi').style.color = 'black';
         document.getElementById('list-anggota').style.color = 'black';
         document.getElementById('list-contact').style.color = 'black';
     } else {
-        document.getElementById('navbar').style.backgroundColor = 'transparent';
+        document.getElementById('navbar').style.backgroundColor = 'white';
         document.getElementById('navbar').style.boxShadow = 'none';
-        document.getElementById('title-brand').style.color = 'white' ;
-        document.getElementById('list-home').style.color = 'white';
-        document.getElementById('list-about').style.color = 'white';
-        document.getElementById('list-visi-misi').style.color = 'white';
-        document.getElementById('list-anggota').style.color = 'white';
-        document.getElementById('list-contact').style.color = 'white';
+        document.getElementById('title-brand').style.color = 'blue' ;
+        document.getElementById('list-home').style.color = 'black';
+        document.getElementById('list-about').style.color = 'black';
+        document.getElementById('list-visi-misi').style.color = 'black';
+        document.getElementById('list-anggota').style.color = 'black';
+        document.getElementById('list-contact').style.color = 'black';
+        
     }
 }
