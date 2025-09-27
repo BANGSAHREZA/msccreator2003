@@ -197,6 +197,9 @@ nav {
 }
 
 /* Hero khusus agar tidak geser dan tidak keluar batas */
+/* Hero utama (gambar latar tetap bersama teks) */
+
+/* Versi dasar (desktop) */
 #hero {
   width: 100%;
   height: 100vh;
@@ -211,6 +214,34 @@ nav {
   justify-content: center;
   box-sizing: border-box;
   padding: 0;
+  color: #fff;
+}
+
+/* Opsi A: jika ingin gambar tetap terlihat dengan batasan mobile, tambahkan fallback warna solid */
+@supports not (background-image: url('/assets/img/home2.jpg')) {
+  #hero {
+    background-color: #000; /* fallback jika gambar tidak tersedia */
+  }
+}
+
+/* Responsif: penyesuaian teks agar tidak tumpang-tindih di layar kecil */
+@media (max-width: 1024px) {
+  #hero { height: 90vh; } /* sedikit lebih pendek di tablet untuk memberi ruang konten */
+  .content-hero h1 { font-size: 40px; } /* contoh penyesuaian ukuran judul */
+}
+
+@media (max-width: 768px) {
+  #hero {
+    height: auto;          /* biar tidak terlalu besar di HP */
+    min-height: 60vh;        /* memastikan ada ambang visual yang cukup */
+  }
+  /* Sesuaikan ukuran teks konten hero */
+  .content-hero h1 {
+    font-size: 32px;
+  }
+  .content-hero p {
+    font-size: 14px;
+  }
 }
 .content-hero {
   text-align: center;
@@ -361,6 +392,7 @@ nav {
   text-align: center;
   margin-bottom: 40px;
   padding: 0 16px;
+  justify-content: center;
 }
 .head-agt h1 { font-size: 28px; margin-bottom: 10px; }
 .head-agt p { font-size: 16px; color: #555; }
